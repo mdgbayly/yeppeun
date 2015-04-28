@@ -4,4 +4,5 @@ scala:
 script: sbt stage
 dd:
   secure: UJLtGdaU+r9gRXWPQoIQcEUbd/AWis5NwZ2WX3hF6jGAko2ly6vTFEmYvj85K9Rv9K5W0zkqpKeUYTAPiWMVCV80xpj8+hiZZ+OuhUDUL0JZ33ZqZ4qJ3izAU0mUmDltUjs4AiRWEBuQmGy5ozeC1mr8X58VbemTvKsMtTa1cxs=
+  
 after-success: sbt deployHeroku
