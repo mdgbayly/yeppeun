@@ -12,3 +12,5 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
+
+herokuAppName in Compile := "shrouded-springs-5377"
