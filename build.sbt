@@ -23,3 +23,5 @@ libraryDependencies ++= Seq(
   "rubygems" % "pry" % "0.9.12.6",
   "rubygems" % "ffi" % "1.9.3"
 )
+
+fork in run := true
