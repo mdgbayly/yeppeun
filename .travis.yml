@@ -3,5 +3,6 @@ scala:
 - 2.11.1
 script: sbt stage
 after_success: sbt deployHeroku
-dd:
-  secure: Rjxew91Ix9BFw2p0Sh/A3NHsdJLMiEE6xMX+fdyNM3EdgwvLF5MwpmZhM43VpkQSFSUbJxaJTTz9R6J0dafAq9zXCN2C2V/mapB7QQPqFd2apFuNq1zNO/tfb/uK+8FBugE42y6yBPniQUko8KbAGzeCojMtRXvTSpVhlBj2nc0=
+env:
+  global:
+    secure: cWEGsGRK8SLuIhB206MR83Ff9TPsvhU03lbm089PK63TkujF7UqWUqZ4xgEhmVXqtx6hycpimKMNssZfEnIqnuDQe4k/iTo1VAj8hDJ0QzZViC34acdniPHrCXJxs3yQN2nPsnB7udM8neeZ1sE6d+gAnZ8oZXTOEGP/EeKBKTA=
