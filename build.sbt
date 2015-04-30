@@ -24,4 +24,6 @@ libraryDependencies ++= Seq(
   "rubygems" % "ffi" % "1.9.3"
 )
 
+PlayKeys.playWatchService := play.sbtplugin.run.PlayWatchService.sbt(pollInterval.value)
+
 fork in run := true

@@ -1,0 +1,19 @@
+{
+  "name": "yeppeun",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mdgbayly/yeppeun",
+  "authors": [
+    "Martin Bayly <martin.bayly@d2l.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material": "~0.8.3"
+  }
+}
