@@ -2,50 +2,56 @@
 
 @main(Messages("application.name")) {
 
-<!-- Container #2 -->
+<!-- Wireframe Container #2 -->
 <div flex layout="row">
-
-  <!-- Container #3 -->
-  <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+  <!-- Wireframe Container #3 -->
+  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
     <md-list>
-
-      <!-- List item #1 -->
-      <md-item >
-        <md-button>
-          <md-icon md-svg-src="@routes.Assets.at("images/svg/avatar-1.svg")" class="avatar"></md-icon>
-          Lia Luogo
+      <md-item ng-repeat="it in ul.users">
+        <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }" aria-label="Show User List">
+          <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
+          {{it.name}}
         </md-button>
       </md-item>
-
-      <!-- List item #2 -->
-      <md-item >
-        <md-button>
-          <md-icon md-svg-src="@routes.Assets.at("images/svg/avatar-4.svg")" class="avatar"></md-icon>
-          Lawrence Ray
-        </md-button>
-      </md-item>
-
     </md-list>
   </md-sidenav>
 
-  <!-- Container #4 -->
+  <!-- Wireframe Container #4 -->
   <md-content flex id="content">
-    <!-- User details sample -->
+    <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
+    <h2>{{ul.selected.name}}</h2>
+    <p>{{ul.selected.content}}</p>
 
-    <md-icon md-svg-src="@routes.Assets.at("images/svg/avatar-1.svg")" class="avatar"></md-icon>
-    <h2>Lia Luogo</h2>
-    <p>
-      I love cheese...
-    </p>
-
-    <dl class="posts">
-      @for(post <- posts) {
-      <dt>@post.name</dt>
-      <dd>@post.author</dd>
-      }
-    </dl>
+    <md-button class="share" md-no-ink ng-click="ul.share($event)" aria-label="Share" >
+      <md-icon md-svg-icon="share"></md-icon>
+    </md-button>
   </md-content>
-
 </div>
+
+} {
+
+  <script src="@routes.Assets.at("src/users/Users.js")"></script>
+  <script src="@routes.Assets.at("src/users/UsersController.js")"></script>
+  <script src="@routes.Assets.at("src/users/UsersService.js")"></script>
+
+ <script type="text/javascript">
+  angular
+      .module('yeppeun', ['ngMaterial', 'users'])
+      .config(function($mdThemingProvider, $mdIconProvider){
+          $mdThemingProvider.theme('default')
+              .primaryPalette('brown')
+              .accentPalette('red');
+
+          // Register the user `avatar` icons
+          $mdIconProvider
+                  .defaultIconSet("@routes.Assets.at("images/svg/avatars.svg")", 128)
+                  .icon("menu", "@routes.Assets.at("images/svg/menu.svg")", 24)
+                  .icon("share", "@routes.Assets.at("images/svg/share.svg")", 24)
+                  .icon("google_plus", "@routes.Assets.at("images/svg/google_plus.svg")" , 512)
+                  .icon("hangouts"   , "@routes.Assets.at("images/svg/hangouts.svg")"    , 512)
+                  .icon("twitter"    , "@routes.Assets.at("images/svg/twitter.svg")"    , 512)
+                  .icon("phone"      , "@routes.Assets.at("images/svg/phone.svg")"      , 512);
+      });
+ </script>
 
 }

@@ -1,4 +1,4 @@
-@(title: String)(content: Html)(implicit lang: Lang)
+@(title: String)(content: Html)(anglr: Html)(implicit lang: Lang)
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -11,27 +11,24 @@
 
   </head>
 
-  <body ng-app="yeppeun" layout="column" >
+  <body ng-app="yeppeun" layout="column" ng-controller="UserController as ul">
 
   <!-- Container #1 (see wireframe) -->
   <md-toolbar layout="row" >
+    <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show Menu">
+      <md-icon md-svg-icon="menu" ></md-icon>
+    </md-button>
     <h1>@title</h1>
   </md-toolbar>
 
   @content
 
-    <script src="@routes.Assets.at("vendor/angular/angular.js")"></script>
-    <script src="@routes.Assets.at("vendor/angular-animate/angular-animate.js")"></script>
-    <script src="@routes.Assets.at("vendor/angular-aria/angular-aria.js")"></script>
-    <script src="@routes.Assets.at("vendor/angular-material/angular-material.js")"></script>
+  <script src="@routes.Assets.at("vendor/angular/angular.js")"></script>
+  <script src="@routes.Assets.at("vendor/angular-animate/angular-animate.js")"></script>
+  <script src="@routes.Assets.at("vendor/angular-aria/angular-aria.js")"></script>
+  <script src="@routes.Assets.at("vendor/angular-material/angular-material.js")"></script>
 
-    <script type="text/javascript">
-        angular
-            .module('yeppeun', [ 'ngMaterial' ])
-            .run(function($log){
-              $log.debug("startApp running ");
-            });
-     </script>
+  @anglr
 
   </body>
 </html>
