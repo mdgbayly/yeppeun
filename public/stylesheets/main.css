@@ -41,11 +41,22 @@ md-button.menuBtn > md-icon {
   /*max-width: 200px;*/
 }
 
+md-content {
+  justify-content: center;
+}
+
 #content md-card {
-  max-width: 300px;
+  background-color: white;
   justify-content: space-between;
   padding: 0 1px 0 1px;
 }
+
+@media (min-width: 600px) {
+  #content md-card {
+    max-width: 300px;
+  }
+}
+
 /* Typography support coming in 0.8.0 */
 
 md-toolbar h1 {

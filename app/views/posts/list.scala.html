@@ -3,7 +3,7 @@
 @main(Messages("application.name")) {
 
 <!-- Wireframe Container #4 -->
-<md-content layout="row" layout-wrap flex id="content">
+<md-content layout="row" layout-sm="column" layout-wrap id="content">
 
   <md-card>
     <div>
@@ -112,6 +112,12 @@
 
  <script type="text/javascript">
   angular.module('yeppeun', ['ngMaterial'])
+        .config(function($mdThemingProvider, $mdIconProvider){
+
+          $mdThemingProvider.theme('default')
+              .primaryPalette('indigo')
+              .accentPalette('red')
+      });
  </script>
 
 }
