@@ -15,5 +15,8 @@
   ],
   "devDependencies": {
     "angular-material": "~0.8.3"
+  },
+  "dependencies": {
+    "flickity": "~1.0.2"
   }
 }
