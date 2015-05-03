@@ -1,1 +1,9 @@
 application.name = Yeppeun
+
+posts.new = Add a new Yeppeun
+post.new.command = New
+
+posts.new.submit = Add
+posts.new.success = Successfully added new post {0}.
+
+validation.errors = Please correct the errors in the form.

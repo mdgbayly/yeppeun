@@ -6,6 +6,7 @@
 GET     /                           controllers.Application.index
 
 GET     /posts                      controllers.Posts.list
+GET     /posts/:id                  controllers.Posts.show(id: Int)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

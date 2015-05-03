@@ -13,10 +13,11 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "angular-material": "~0.8.3"
-  },
   "dependencies": {
-    "flickity": "~1.0.2"
+    "flickity": "~1.0.2",
+    "angular-material": "master"
+  },
+  "resolutions": {
+    "angular-material": "master"
   }
 }

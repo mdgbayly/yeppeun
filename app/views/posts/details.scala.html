@@ -1,0 +1,97 @@
+@(post: Post)(implicit lang: Lang)
+
+@main(post.name) {
+
+<!-- Wireframe Container #4 -->
+<md-content layout="row" layout-sm="column" layout-align="start start" id="content">
+
+  @tags.flicker(post)
+
+  <md-list>
+    <md-subheader class="md-no-sticky">2 line item</md-subheader>
+    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Bev</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>
+    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Esmerelda</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>
+    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Orinoco</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>
+    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>    <md-list-item class="md-2-line">
+      <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
+      <div class="md-list-item-text">
+        <h3>Eliza</h3>
+        <p>Secondary text</p>
+      </div>
+    </md-list-item>
+  </md-list>
+</md-content>
+
+} {
+
+ <script type="text/javascript">
+  angular.module('yeppeun', ['ngMaterial'])
+        .config(function($mdThemingProvider, $mdIconProvider){
+
+          $mdThemingProvider.theme('default')
+              .primaryPalette('indigo')
+              .accentPalette('red')
+      });
+ </script>
+
+}

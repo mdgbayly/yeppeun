@@ -3,108 +3,11 @@
 @main(Messages("application.name")) {
 
 <!-- Wireframe Container #4 -->
-<md-content layout="row" layout-sm="column" layout-wrap id="content">
+<md-content layout="row" layout-sm="column" layout-wrap layout-align-gt-sm="center center" id="content">
 
-  <md-card>
-    <div>
-      <div class="gallery js-flickity"
-           data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "initialIndex": 1, "contain": true}'>
-        <img src="@routes.Assets.at("images/user/IMG_0371.JPG")" class="md-card-image" alt="New Shoes On">
-        <div class="gallery-cell">
-        </div>
-        <img src="@routes.Assets.at("images/user/IMG_0612.JPG")" class="md-card-image" alt="New Shoes On">
-      </div>
-
-     <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </div>
-    </div>
-
-    <md-card-content>
-      <h2 class="md-title">Layout Attribute</h2>
-      <p>
-        The layout system is based upon element attributes rather than CSS classes.
-      </p>
-    </md-card-content>
-
-  </md-card>
-
-    <md-card>
-      <img src="@routes.Assets.at("images/user/IMG_0612.JPG")" class="md-card-image" alt="New Shoes On">
-      <md-card-content>
-        <h2 class="md-title">Layout Attribute</h2>
-        <p>
-          The layout system is based upon element attributes rather than CSS classes.
-        </p>
-      </md-card-content>
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </div>
-    </md-card>
-
-  <md-card>
-    <img src="@routes.Assets.at("images/user/IMG_0077.JPG")" class="md-card-image" alt="New Shoes On">
-    <md-card-content>
-      <h2 class="md-title">Layout Attribute</h2>
-      <p>
-        The layout system is based upon element attributes rather than CSS classes.
-      </p>
-    </md-card-content>
-    <div class="md-actions" layout="row" layout-align="end center">
-      <md-button>Action 1</md-button>
-      <md-button>Action 2</md-button>
-    </div>
-  </md-card>
-
-    <md-card>
-      <img src="@routes.Assets.at("images/user/IMG_0653.JPG")" class="md-card-image" alt="New Shoes On">
-      <md-card-content>
-        <h2 class="md-title">Layout Attribute</h2>
-        <p>
-          The layout system is based upon element attributes rather than CSS classes.
-        </p>
-      </md-card-content>
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </div>
-    </md-card>
-
-
-    <md-card>
-      <div>
-        <img src="@routes.Assets.at("images/user/IMG_0372.JPG")" class="md-card-image" alt="New Shoes On">
-        <div class="md-actions" layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
-        </div>
-      </div>
-      <md-card-content>
-        <h2 class="md-title">Layout Attribute</h2>
-        <p>
-          The layout system is based upon element attributes rather than CSS classes.
-        </p>
-      </md-card-content>
-    </md-card>
-
-  <md-card>
-    <div>
-      <img src="@routes.Assets.at("images/user/IMG_0371.JPG")" class="md-card-image" alt="New Shoes On">
-      <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </div>
-    </div>
-    <md-card-content>
-      <h2 class="md-title">Layout Attribute</h2>
-      <p>
-        The layout system is based upon element attributes rather than CSS classes.
-      </p>
-    </md-card-content>
-  </md-card>
-
+  @for(post <- posts) {
+    @tags.flicker(post)
+  }
 
 </md-content>
 

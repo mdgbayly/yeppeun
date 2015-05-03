@@ -1,1 +1,9 @@
 application.name = 예쁜
+
+posts.new = 새로 추가
+post.new.command = 새로운
+
+posts.new.submit = 추가
+posts.new.success = 성공적으로 새 게시물을 추가 {0}.
+
+validation.errors = 형태로 유효성 검사 오류 를 수정하십시오.
