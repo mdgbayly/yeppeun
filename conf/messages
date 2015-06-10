@@ -1,9 +1,13 @@
 application.name = Yeppeun
 
+posts.form = Details of Yeppeun
 posts.new = Add a new Yeppeun
 post.new.command = New
+post.list.command = List
+
 
 posts.new.submit = Add
 posts.new.success = Successfully added new post {0}.
 
 validation.errors = Please correct the errors in the form.
+validation.id.duplicate = Please correct the duplicate id.

@@ -1,0 +1,32 @@
+@(postForm: Form[Post])(implicit flash: Flash, lang: Lang)
+
+@import helper._
+@import MyHelpers._
+
+@main(Messages("posts.form")) {
+
+<md-content layout-padding>
+  @helper.form(action = routes.Posts.save()) {
+
+      @helper.inputText(postForm("id"))
+      @helper.inputText(postForm("author"))
+      @helper.inputText(postForm("name"))
+      @helper.inputText(postForm("image1"))
+      @helper.inputText(postForm("image2"))
+    <md-button class="md-raised">Save</md-button>
+  }
+</md-content>
+
+} {
+
+<script type="text/javascript">
+  angular.module('yeppeun', ['ngMaterial'])
+        .config(function($mdThemingProvider, $mdIconProvider){
+
+          $mdThemingProvider.theme('default')
+              .primaryPalette('indigo')
+              .accentPalette('red')
+      });
+ </script>
+
+}

@@ -1,5 +1,6 @@
 application.name = 예쁜
 
+posts.form = 세부 사항 예쁜
 posts.new = 새로 추가
 post.new.command = 새로운
 

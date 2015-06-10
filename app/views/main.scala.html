@@ -1,4 +1,4 @@
-@(title: String)(content: Html)(anglr: Html)(implicit lang: Lang)
+@(title: String)(content: Html)(anglr: Html)(implicit flash: Flash, lang: Lang)
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -17,11 +17,35 @@
 
   <!-- Container #1 (see wireframe) -->
   <md-toolbar layout="row" >
-    <md-button class="menu" hide-gt-sm aria-label="Show Menu">
-      <md-icon md-svg-src="@routes.Assets.at("images/svg/menu.svg")" ></md-icon>
-    </md-button>
-    <h1>@title</h1>
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Settings">
+        <md-icon md-svg-icon="@routes.Assets.at("images/svg/menu.svg")"></md-icon>
+      </md-button>
+      <h2>
+        <span>@title</span>
+      </h2>
+      <span flex></span>
+      <md-button ng-href="@routes.Application.index()" aria-label="Favorite">
+        @Messages("post.list.command")
+      </md-button>
+      <md-button ng-href="@controllers.routes.Posts.newPost" aria-label="More">
+        @Messages("post.new.command")
+      </md-button>
+    </div>
+
   </md-toolbar>
+
+  @if(flash.get("success").isDefined) {
+  <md-toast class="md-right">
+    <span flex>@flash.get("success")</span>
+  </md-toast>
+  }
+
+  @if(flash.get("error").isDefined) {
+  <md-toast class="md-right">
+    <span flex>@flash.get("error")</span>
+  </md-toast>
+  }
 
   <div>
     @content

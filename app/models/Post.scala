@@ -15,4 +15,8 @@ object Post {
 
   def findAll = posts.toList.sortBy(_.name)
   def findById(id: Int) = posts.find(_.id == id)
+
+  def add(post: Post): Unit = {
+    posts = posts + post
+  }
 }

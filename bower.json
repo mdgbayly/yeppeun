@@ -18,6 +18,7 @@
     "angular-material": "master"
   },
   "resolutions": {
-    "angular-material": "master"
+    "angular-material": "master",
+    "angular": "1.4.0"
   }
 }

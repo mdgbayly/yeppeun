@@ -19,7 +19,7 @@
   <md-card-content>
     <h2 class="md-title">@post.author</h2>
     <p>
-      @post.name
+      <a href="@controllers.routes.Posts.show(post.id)">@post.name</a>
     </p>
   </md-card-content>
 

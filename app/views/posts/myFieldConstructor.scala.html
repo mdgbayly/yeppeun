@@ -1,0 +1,6 @@
+@(elements: helper.FieldElements)
+<md-input-container flex @if(!elements.field.value.mkString.isEmpty()) {class="md-input-has-value"}>
+  <label for="@elements.id">@elements.label</label>
+  @elements.input
+</md-input-container>
+
